@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>containerbase/.github",
+    "github>containerbase/.github//merge-queue.json"
+  ],
+  "packageRules": [
+    {
+      "description": "Enable minor updates on renovate rebuild trigger file",
+      "matchFileNames": ["renovate.Dockerfile"],
+      "matchUpdateTypes": ["minor"],
+      "enabled": true
+    },
+    {
+      "description": "extract wally version",
+      "matchPackageNames": ["UpliftGames/wally"],
+      "matchDatasources": ["github-releases"],
+      "extractVersion": "v(?<version>.+)"
+    }
+  ]
+}

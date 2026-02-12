@@ -1,0 +1,10 @@
+{
+  "image": "mono",
+  "depName": "mono/mono",
+  "datasource": "gitlab-releases",
+  "versioning": "semver",
+  "extractVersion": "v(?<version>.+)",
+  "startVersion": "6.14.1",
+  "ignoredVersions": [],
+  "reverse": true
+}
