@@ -27,6 +27,7 @@ fi
 echo "------------------------"
 echo "init repo"
 git reset --quiet --hard "mono-${TOOL_VERSION}"
+git submodule --quiet update --init --recursive
 
 ./autogen.sh \
   --prefix="${tp}" \
