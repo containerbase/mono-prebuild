@@ -19,7 +19,7 @@ install-apt \
     ;
 
 # prepare mono source
-git clone --recursive https://gitlab.winehq.org/mono/mono.git /usr/src/mono
+git clone --quiet --recursive https://gitlab.winehq.org/mono/mono.git /usr/src/mono
 
 # create folders
 create_tool_path > /dev/null
