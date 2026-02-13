@@ -28,9 +28,11 @@ COPY --from=containerbase /usr/local/sbin/ /usr/local/sbin/
 COPY --from=containerbase /usr/local/containerbase/ /usr/local/containerbase/
 RUN install-containerbase
 
-
 # renovate: datasource=github-tags packageName=git/git
 RUN install-tool git v2.53.0
+
+# renovate: datasource=github-releases packageName=containerbase/python-prebuild
+RUN install-tool python 3.14.3
 
 # # renovate: datasource=docker versioning=docker
 # RUN install-tool rust 1.93.0
