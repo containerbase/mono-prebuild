@@ -28,7 +28,13 @@ echo "------------------------"
 echo "init repo"
 git reset --hard "v${TOOL_VERSION}"
 
-./autogen.sh --disable-libraries --disable-mcs-build --disable-support-build --enable-nls=no
+./autogen.sh \
+  --prefix="${tp}" \
+  --disable-libraries \
+  --disable-mcs-build \
+  --disable-support-build \
+  --enable-nls=no \
+  ;
 
 echo "------------------------"
 echo "------------------------"
@@ -39,18 +45,22 @@ make help
 echo "------------------------"
 echo "------------------------"
 echo "build ${TOOL_NAME}"
-make -O "-j$(nproc)" runtime
+make -O "-j$(nproc)" all
+make -O "-j$(nproc)" -C runtime install
 
-mkdir "${tp}/bin"
-cp target/release/wally "${tp}/bin/wally"
 shell_wrapper mono "${tp}/bin"
 
 echo "------------------------"
 echo "testing"
 mono --version
 
+# Download the latest stable `nuget.exe` to `/usr/local/bin`
+sudo curl --retry 5 --fail -sSL -o /usr/local/bin/nuget.exe https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+
+mono /usr/local/bin/nuget.exe help
+
 file "${tp}/bin/mono"
-ldd "${tp}/bin/wally"
+ldd "${tp}/bin/mono"
 
 echo "------------------------"
 echo "create archive"

@@ -1,7 +1,9 @@
 {
+  "$schema": "https://raw.githubusercontent.com/containerbase/internal-tools/refs/heads/main/schema.json",
   "image": "mono",
   "depName": "mono/mono",
   "datasource": "gitlab-releases",
+  "registryUrls": ["https://gitlab.winehq.org"],
   "versioning": "semver",
   "extractVersion": "v(?<version>.+)",
   "startVersion": "6.14.1",
