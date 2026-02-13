@@ -1,10 +1,10 @@
 #-------------------------
 # renovate rebuild trigger
-# https://github.com/UpliftGames/wally/releases
+# https://gitlab.winehq.org/mono/mono
 #-------------------------
 
 # makes lint happy
 FROM scratch
 
-# renovate: datasource=github-releases depName=wally packageName=UpliftGames/wally versioning=semver
-ENV WALLY_VERSION=0.3.2
+# renovate: datasource=gitlab-releases depName=mono packageName=mono/mono versioning=semver
+ENV MONO_VERSION=6.14.1

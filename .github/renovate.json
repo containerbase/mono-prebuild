@@ -13,9 +13,10 @@
     },
     {
       "description": "extract wally version",
-      "matchPackageNames": ["UpliftGames/wally"],
-      "matchDatasources": ["github-releases"],
-      "extractVersion": "v(?<version>.+)"
+      "matchPackageNames": ["mono/mono"],
+      "matchDatasources": ["gitlab-releases"],
+      "extractVersion": "mono-(?<version>.+)",
+      "registryUrls": ["https://gitlab.winehq.org/"]
     }
   ]
 }
