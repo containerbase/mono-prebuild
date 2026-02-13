@@ -26,7 +26,7 @@ Optional environment variables
 
 | Name             | Description                                          | Default   |
 | ---------------- | ---------------------------------------------------- | --------- |
-| `DISTRO`         | Set an ubuntu base distro, only `jammy` is supported | `focal`   |
+| `DISTRO`         | Set an ubuntu base distro, only `jammy` is supported | `jammy`   |
 | `APT_HTTP_PROXY` | Set an APT http proxy for installing build deps      | `<empty>` |
 | `DEBUG`          | Show verbose php build output                        | `<empty>` |
 
