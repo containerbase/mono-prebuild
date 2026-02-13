@@ -5,7 +5,7 @@
   "datasource": "gitlab-releases",
   "registryUrls": ["https://gitlab.winehq.org"],
   "versioning": "semver",
-  "extractVersion": "v(?<version>.+)",
+  "extractVersion": "mono-(?<version>.+)",
   "startVersion": "6.14.1",
   "ignoredVersions": [],
   "reverse": true
