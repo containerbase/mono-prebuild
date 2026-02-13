@@ -16,17 +16,18 @@ install-apt \
     build-essential \
     cmake \
     file \
+    libkrb5-dev \
     libssl-dev \
     libtool \
+    mono-devel \
     pkg-config \
     ;
 
 
-echo -e "\e[0m-------------------------------------------------------"
+#echo -e "\e[0m-------------------------------------------------------"
 
-echo -e "\e[0m\e[33m prepare mono source ...\e[0m\e[2m"
-echo -e "\e[0m-------------------------------------------------------"
-git clone --quiet --recursive https://gitlab.winehq.org/mono/mono.git /usr/src/mono
+#echo -e "\e[0m\e[33m prepare mono source ...\e[0m\e[2m"
+#git clone --quiet --recursive https://gitlab.winehq.org/mono/mono.git /usr/src/mono
 
 echo -e "\e[0m-------------------------------------------------------"
 

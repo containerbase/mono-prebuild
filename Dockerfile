@@ -39,10 +39,12 @@ RUN install-tool python 3.14.3
 
 ENTRYPOINT [ "dumb-init", "--", "builder.sh" ]
 
-COPY --chmod=755 bin /usr/local/bin
+COPY --chmod=755 bin/install-builder.sh /usr/local/bin/
 
 ENV TOOL_NAME=mono
 
 RUN install-builder.sh
 
 WORKDIR /usr/src/mono
+
+COPY --chmod=755 bin/builder.sh /usr/local/bin/
