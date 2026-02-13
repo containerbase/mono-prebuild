@@ -9,10 +9,12 @@ set -e
 
 # add required system packages
 install-apt \
+    automake \
     build-essential \
     cmake \
     file \
     libssl-dev \
+    libtool \
     pkg-config \
     ;
 
