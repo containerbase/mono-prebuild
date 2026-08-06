@@ -32,7 +32,7 @@ RUN install-containerbase
 RUN install-tool git v2.55.0
 
 # renovate: datasource=github-releases packageName=containerbase/python-prebuild
-RUN install-tool python 3.14.6
+RUN install-tool python 3.14.7
 
 # # renovate: datasource=docker versioning=docker
 # RUN install-tool rust 1.93.0
