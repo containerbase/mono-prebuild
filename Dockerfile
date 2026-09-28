@@ -29,7 +29,7 @@ COPY --from=containerbase /usr/local/containerbase/ /usr/local/containerbase/
 RUN install-containerbase
 
 # renovate: datasource=github-tags packageName=git/git
-RUN install-tool git v2.55.0
+RUN install-tool git v2.56.0
 
 # renovate: datasource=github-releases packageName=containerbase/python-prebuild
 RUN install-tool python 3.14.7
