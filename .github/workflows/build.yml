@@ -72,7 +72,7 @@ jobs:
     needs:
       - lint
       - build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 1
     if: always()
     steps:
