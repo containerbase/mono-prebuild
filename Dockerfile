@@ -12,7 +12,7 @@ FROM ghcr.io/containerbase/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae7
 #--------------------------------------
 # containerbase image
 #--------------------------------------
-FROM ghcr.io/containerbase/base:14.41.1@sha256:9bf0c432aad042fec7112905e8e443b4e1ad3ee640a85abd718fd0893d3a060d AS containerbase
+FROM ghcr.io/containerbase/base:14.42.0@sha256:00fd23e50b309353d1ba0ffa53c2e989c2e9f65dc848a9b3849020a17c97ddc0 AS containerbase
 
 FROM build-${DISTRO}
 
