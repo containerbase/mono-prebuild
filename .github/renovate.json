@@ -14,6 +14,11 @@
       "matchDatasources": ["gitlab-releases"],
       "extractVersion": "mono-(?<version>.+)",
       "registryUrls": ["https://gitlab.winehq.org/"]
+    },
+    {
+      "description": "Keep containerbase v14 while we build jammy, v15 doesn't install there",
+      "matchPackageNames": ["ghcr.io/containerbase/base"],
+      "allowedVersions": "<15"
     }
   ]
 }
